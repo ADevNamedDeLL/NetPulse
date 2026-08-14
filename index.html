@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="NetPulse — a lightweight Windows system tray network speed monitor built with C# and WinForms.">
+  <title>NetPulse — Network speed, without the noise.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="grid"></div>
+
+  <header class="nav">
+    <a class="brand" href="#">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>NetPulse</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#details">Details</a>
+      <a href="#download">Download</a>
+    </nav>
+    <a class="nav-github" href="https://github.com/ADevNamedDeLL/NetPulse" target="_blank" rel="noopener">View on GitHub <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> Windows network monitor</div>
+        <h1>Network speed,<br><em>without the noise.</em></h1>
+        <p class="hero-text">
+          NetPulse keeps an eye on your connection from the system tray.
+          Real-time upload and download speeds, a live graph, and a focused
+          interface that stays out of your way.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#download">Get NetPulse <span>↓</span></a>
+        </div>
+        <div class="hero-meta">
+          <span>C#</span><b></b><span>.NET Framework 4.8</span><b></b><span>Windows 10 / 11</span>
+        </div>
+      </div>
+
+      <div class="monitor-wrap" aria-label="NetPulse interface preview">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="monitor">
+          <div class="monitor-top">
+            <span class="mini-title"><span class="live"></span> NETPULSE</span>
+            <span class="mono">NETWORK</span>
+          </div>
+          <div class="speed-row">
+            <div>
+              <small>DOWNLOAD</small>
+              <strong id="downloadSpeed">84.7 <span>MB/s</span></strong>
+            </div>
+            <div class="divider"></div>
+            <div>
+              <small>UPLOAD</small>
+              <strong id="uploadSpeed">12.3 <span>MB/s</span></strong>
+            </div>
+          </div>
+          <div class="graph">
+            <div class="graph-lines"></div>
+            <svg viewBox="0 0 640 210" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-opacity=".28"/>
+                  <stop offset="1" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="area" d="M0,168 C34,150 48,162 76,143 S125,116 155,139 S202,158 228,117 S272,82 302,108 S345,144 374,91 S414,62 442,84 S478,116 507,73 S548,42 575,70 S611,94 640,52 V210 H0 Z"/>
+              <path class="pulse" d="M0,168 C34,150 48,162 76,143 S125,116 155,139 S202,158 228,117 S272,82 302,108 S345,144 374,91 S414,62 442,84 S478,116 507,73 S548,42 575,70 S611,94 640,52"/>
+            </svg>
+            <span class="graph-label left">60s</span>
+            <span class="graph-label right">NOW</span>
+          </div>
+          <div class="monitor-bottom">
+            <span><i class="up"></i> Upload</span>
+            <span><i class="down"></i> Download</span>
+            <span class="connection"><i></i> Connected</span>
+          </div>
+        </div>
+        <div class="tray-chip"><span class="tray-icon"><i></i><i></i><i></i></span><span>System tray</span></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="NetPulse capabilities">
+      <div>REAL-TIME MONITORING</div><span>•</span><div>LIVE GRAPH</div><span>•</span><div>TRAY NATIVE</div><span>•</span><div>LIGHTWEIGHT</div><span>•</span><div>NO CLUTTER</div>
+    </section>
+
+    <section class="intro section">
+      <div class="section-kicker">01 / WHY NETPULSE</div>
+      <div>
+        <h2>Everything you need.<br><span>Nothing you don't.</span></h2>
+        <p>NetPulse is built around a simple idea: network information should be available when you need it, then disappear when you don't.</p>
+      </div>
+    </section>
+
+    <section id="features" class="feature-grid section">
+      <article class="feature-card large">
+        <div class="feature-number">01</div>
+        <div class="feature-icon graph-icon"><span></span><span></span><span></span><span></span><span></span></div>
+        <h3>Live connection view</h3>
+        <p>See download and upload activity as it happens through a continuously scrolling performance graph.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-number">02</div>
+        <div class="feature-icon speed-icon">↗</div>
+        <h3>Readable at any speed</h3>
+        <p>Values scale automatically between KB/s, MB/s and GB/s so the numbers stay useful.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-number">03</div>
+        <div class="feature-icon tray-icon big"><i></i><i></i><i></i></div>
+        <h3>Lives in the tray</h3>
+        <p>NetPulse has no unnecessary taskbar window. Click the tray icon when you want the monitor.</p>
+      </article>
+
+      <article class="feature-card wide">
+        <div>
+          <div class="feature-number">04</div>
+          <h3>Small footprint.<br>Focused experience.</h3>
+        </div>
+        <div class="mini-stats">
+          <div><strong>01</strong><span>Purpose</span></div>
+          <div><strong>0</strong><span>External assets</span></div>
+          <div><strong>∞</strong><span>At-a-glance</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="details" class="details section">
+      <div class="section-kicker">02 / UNDER THE HOOD</div>
+      <div class="details-content">
+        <div>
+          <h2>Built for Windows.<br><span>Made to stay quiet.</span></h2>
+          <p>NetPulse uses a custom-drawn WinForms interface on .NET Framework 4.8. The result is a compact native utility that focuses on one job and does it without surrounding itself with unnecessary UI.</p>
+        </div>
+        <div class="specs">
+          <div><span>Language</span><strong>C#</strong></div>
+          <div><span>Framework</span><strong>.NET Framework 4.8</strong></div>
+          <div><span>Interface</span><strong>WinForms / Custom Drawn</strong></div>
+          <div><span>Platform</span><strong>Windows 10 / 11</strong></div>
+          <div><span>Runtime assets</span><strong>None required</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download section">
+      <div class="download-card">
+        <div class="download-mark"><i></i><i></i><i></i></div>
+        <div>
+          <div class="section-kicker">03 / GET STARTED</div>
+          <h2>Keep your connection<br><span>within reach.</span></h2>
+          <p>Download the portable executable or explore the source on GitHub.</p>
+          <div class="download-actions">
+            <a class="button primary" href="https://github.com/ADevNamedDeLL/NetPulse/releases/tag/MainRelease">Download NetPulse <span>↓</span></a>
+            <a class="button secondary" href="https://github.com/ADevNamedDeLL/NetPulse" target="_blank" rel="noopener">Open repository <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark"><i></i><i></i><i></i></span><span>NetPulse</span></div>
+    <p>Network visibility, kept simple.</p>
+    <a href="https://github.com/ADevNamedDeLL/NetPulse" target="_blank" rel="noopener">ADevNamedDeLL / NetPulse ↗</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
