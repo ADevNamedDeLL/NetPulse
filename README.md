@@ -1,46 +1,51 @@
-# 🌐 NetPulse
+# NetPulse
 
-**NetPulse** is a lightweight, modern **Windows system tray network speed monitor** built with **C# WinForms (.NET Framework 4.8)**.  
-It displays **real-time upload & download speeds** with a **dark floating popup**, **live graph**, and **smooth animations** — no clutter, no unnecessary windows.
+**NetPulse** is a lightweight Windows system tray network speed monitor built with **C# WinForms and .NET Framework 4.8**. It provides real-time upload and download speeds through a clean floating interface with a live performance graph and smooth animations.
 
----
-
-## ✨ Features
-
-- 📊 Real-time **download & upload speed**
-- 📈 **Live scrolling graph** (download + upload)
-- 🧠 **Smart speed units** (KB/s → MB/s → GB/s)
-- 🖱️ **Click tray icon to toggle popup**
-- 🖥️ No taskbar window (tray-only app)
-- ⚡ Lightweight & fast
-- 📦 Portable (no external assets at runtime)
+The application is designed to remain unobtrusive while providing network activity information at a glance.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
+
+- Real-time download and upload speed monitoring
+- Live scrolling graph for download and upload activity
+- Automatic speed unit conversion from KB/s to MB/s and GB/s
+- System tray integration with click-to-toggle popup
+- Tray-only operation with no taskbar window
+- Lightweight and responsive
+- Portable with no external runtime assets required
+
+---
+
+## Tech Stack
 
 - **Language:** C#
 - **Framework:** .NET Framework 4.8
-- **UI:** WinForms (custom drawn)
+- **UI:** WinForms with custom drawing
 - **IDE:** Visual Studio
-- **OS:** Windows 10 / 11
-
+- **Supported OS:** Windows 10 / 11
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/NetPulse.git
 cd NetPulse
 ```
+### 2. Run NetPulse
 
-2. Run The ```NetPulse.exe``` File
+Launch the `NetPulse.exe` executable.
+
+NetPulse runs from the system tray and does not open a separate taskbar window.
 
 ---
 
-## 📜 License
-MIT License
-You are free to use, modify, and distribute this project.
+## License
+
+**MIT License**
+
+You are free to use, modify, and distribute this project in accordance with the terms of the MIT License.
